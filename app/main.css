@@ -9,9 +9,8 @@ html {
 }
 
 body {
-  margin: 5;
+  margin: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 40;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul {
