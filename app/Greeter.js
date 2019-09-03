@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 var config = require('./config.json');
+import styles from './Greeter.css';
 
 // module.exports = function() {
 //     var greet = document.createElement('div');
@@ -9,7 +10,7 @@ var config = require('./config.json');
 class Greeter extends Component{
     render(){
         return (
-            <div>
+            <div className={styles.root}>
                 {config.greetText}
             </div>
         );
