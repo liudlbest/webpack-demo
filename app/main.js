@@ -7,6 +7,7 @@ import {render} from 'react-dom';
 import Greeter from './Greeter';
 
 import './main.css'; 
+import styles from './Greeter.css';//导入
 
 // render(<Greeter/>, document.getElementById('root'));
 
@@ -15,8 +16,16 @@ class Hello extends React.Component{
     render(){
         //return 里面写jsx语法
         return (
-            <p>Hello world.</p>
+            <div className={styles.root}>
+                <p onClick={this.clickHandler.bind(this)}>Hello world.</p>
+            </div>
         )
+    }
+
+    clickHandler(e){
+        //e即js中的事件对象，例如e.preventDefault()
+        //函数执行时this即组件本身，因为上面的.bind(this)
+        console.log(Date.now())
     }
 }
 
