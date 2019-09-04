@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 module.exports = {
     entry: __dirname + "/app/main.js", //已多次提及的唯一入口文件
@@ -56,6 +57,7 @@ module.exports = {
             // chunkFilename: '[id].css',
             // ignoreOrder: false, // Enable to remove warnings about conflicting order
         }),
+        new CleanWebpackPlugin()
     ],
     optimization:{
         minimizer:[
