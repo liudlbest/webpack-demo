@@ -14,10 +14,14 @@ import styles from './Greeter.css';//导入
 //定义组件
 class Hello extends React.Component{
     render(){
+        const arr = ['a','b','c'];
         //return 里面写jsx语法
         return (
             <div className={styles.root}>
                 <p onClick={this.clickHandler.bind(this)}>Hello world.</p>
+                {arr.map((item,index) => {
+                    return <p key={index}>this is{item}</p>
+                })}
             </div>
         )
     }
