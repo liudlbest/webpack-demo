@@ -36,9 +36,9 @@ module.exports = {
 		                options: {
                             modules: true, // 指定启用css modules
 //                            localIdentName: '[path][name]__[local]--[hash:base64:5]' // 指定css的类名格式
-                    }, {
-                      loader: "postcss-loader"
-                    }
+                    },
+                }, {
+                  loader: "postcss-loader"
                 }
             ]
         }
