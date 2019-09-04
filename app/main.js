@@ -15,13 +15,23 @@ import styles from './Greeter.css';//导入
 class Hello extends React.Component{
     render(){
         const arr = ['a','b','c'];
+        const isShow = true;
         //return 里面写jsx语法
         return (
             <div className={styles.root}>
                 <p onClick={this.clickHandler.bind(this)}>Hello world.</p>
+
+                {/*loop*/}
                 {arr.map((item,index) => {
                     return <p key={index}>this is{item}</p>
                 })}
+
+                {/* determine */}
+                <p>part 1</p>
+                {
+                    isShow ? <p>display</p> : <p>not display</p>
+                }
+                <p style={{display:isShow?'block':'none'}}>Hello</p>
             </div>
         )
     }
