@@ -8,6 +8,13 @@ import Header from '../../components/Header/index';
 
 
 class Hello extends React.Component{
+    constructor(props, context){
+        super(props, context);
+        this.state = {
+            //显示当前时间
+            now: Date.now()
+        }
+    }
     render(){
         const arr = ['a','b','c'];
         const isShow = true;
@@ -28,7 +35,7 @@ class Hello extends React.Component{
                     isShow ? <p>display</p> : <p>not display</p>
                 }
                 <p style={{display:isShow?'block':'none'}}>Hello</p>
-          <p>hello world</p>
+                <p>hello world {this.state.now}</p>
 		<hr/>
 		<Carousel/>
 		<Recommend/>
@@ -40,7 +47,10 @@ class Hello extends React.Component{
     clickHandler(e){
         //e即js中的事件对象，例如e.preventDefault()
         //函数执行时this即组件本身，因为上面的.bind(this)
-        console.log(Date.now())
+        // console.log(Date.now())
+        this.setState({
+            now: Date.now()
+        })
     }
 }
 
