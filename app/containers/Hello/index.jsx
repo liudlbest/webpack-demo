@@ -3,8 +3,8 @@ import {render} from 'react-dom';
 import Carousel from './subpage/Carousel'
 import Recommend from './subpage/Recommend'
 import List from './subpage/List'
-import Greeter from '../../Greeter';
 import '../../main.css';
+import Header from '../../components/Header/index';
 
 
 class Hello extends React.Component{
@@ -14,7 +14,8 @@ class Hello extends React.Component{
         //return 里面写jsx语法
         return (
             <div>
-	        <p onClick={this.clickHandler.bind(this)}>Hello world.</p>
+                <Header/>
+	            <p onClick={this.clickHandler.bind(this)}>Hello world.</p>
 
                 {/*loop*/}
                 {arr.map((item,index) => {

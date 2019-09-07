@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
 
-
+  
   devServer: {
     contentBase: "./dist",//本地服务器所加载的页面所在的目录
     historyApiFallback: true,//不跳转
@@ -22,6 +22,7 @@ module.exports = {
     rules: [
         {
             test: /(\.jsx|\.js)$/,
+            resolve: { extensions: [".js", ".jsx"] },
             use: {
                 loader: "babel-loader"
             },

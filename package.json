@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack",
+    "start": "webpack --display-error-details",
     "server": "NODE_ENV=dev webpack-dev-server --open --display-error-details --colors --watch",
     "build": "set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress"
   },
