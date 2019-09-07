@@ -14,7 +14,7 @@ class Hello extends React.Component{
         //return 里面写jsx语法
         return (
             <div>
-                <Header/>
+                <Header title="Hello page"/>
 	            <p onClick={this.clickHandler.bind(this)}>Hello world.</p>
 
                 {/*loop*/}
