@@ -36,10 +36,13 @@ class Hello extends React.Component{
                 }
                 <p style={{display:isShow?'block':'none'}}>Hello</p>
                 <p>hello world {this.state.now}</p>
-		<hr/>
-		<Carousel/>
-		<Recommend/>
-		<List/>
+                <hr/>
+                <Carousel/>
+                <Recommend/>
+                <List/>
+                <hr/>
+                <p>router</p>
+                
             </div>
         )
     }
