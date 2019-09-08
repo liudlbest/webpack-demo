@@ -21,17 +21,18 @@ class RouteMap extends React.Component{
                 </Route> */}
                 <div>
                     <ul>
-                        <li><Link to="/">Hello</Link></li>
+                        <li><Link to="/">App</Link></li>
                         <li><Link to="/home">Home</Link></li>
                         <li><Link to="/list">List</Link></li>
                     </ul>
                     <Switch>
                         <Route path="/" component={App}>
-                            <Route exact path="/home" component={Home}/>
+                            <Route path="/home" component={Home}/>
                             <Route path="/list" component={List}/>
-                            <Route path="/*" component={NotFound}/>
-                        </Route>
+                        </Route> 
+                        <Route component={NotFound}/>                       
                     </Switch>
+                    
                 </div>
             </Router>
         )
