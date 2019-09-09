@@ -6,6 +6,7 @@ import List from '../containers/List'
 import Home from '../containers/Home'
 import NotFound from '../containers/NotFound'
 import Hello from '../containers/Hello'
+import Detail from '../containers/Detail'
 
 class RouteMap extends React.Component{
     updateHandle(){
@@ -24,11 +25,13 @@ class RouteMap extends React.Component{
                         <li><Link to="/">App</Link></li>
                         <li><Link to="/home">Home</Link></li>
                         <li><Link to="/list">List</Link></li>
+                        <li><Link to="/detail/1">Detail to 1</Link></li>
                     </ul>
                     <Switch>
                         <Route path="/" component={App}>
                             <Route path="/home" component={Home}/>
                             <Route path="/list" component={List}/>
+                            <Route path="/detail/:id" component={Detail}/>
                         </Route> 
                         <Route component={NotFound}/>                       
                     </Switch>
